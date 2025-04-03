@@ -6,6 +6,7 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
+
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -89,7 +90,10 @@ const locations = [
     text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
   }
 ];
-
+document.querySelector('button').addEventListener('click', () => {
+  const sound = new Audio('button-click.mp3');
+  sound.play();
+});
 // initialize buttons
 button1.onclick = goStore;
 button2.onclick = goCave;
